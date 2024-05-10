@@ -64,54 +64,48 @@ public class DLLImp<T> implements DLL<T>{
 	      
 	    public DLLImp() {  
 	            head = current = null;  
-	            count = 0;  
+	            counter = 0;  
 	    }  
 	  
 
-	    public int size()  
-	     {  
-	         return count;  
+	    public int size()       {  
+	         return counter;  
 	     }  
 	  
 	    
-	    public boolean empty()  
-	    {  
+	    public boolean empty()   {  
 	        return head == null;  
 	    }  
 	  
 	    
-	    public boolean last()   
-	    {  
+	    public boolean last()   {  
 	            return current.next == null;  
 	    }  
 	      
 	    
-	    public boolean first()  
-	    {  
+	    public boolean first()   {  
 	            return current.previous == null;  
 	    }  
 	  
 	    
-	    public void findFirst()  
-	    {  
+	    public void findFirst()   {  
 	        current = head;  
 	    }  
 	  
 	    
-	    public void findNext()  
-	    {  
+	    public void findNext()  {  
 	        current = current.next;  
 	    }  
 	  
 	    
-	    public void findPrevious()  
-	    {  
+	    public void findPrevious()   {  
 	        current = current.previous;  
 	    }  
 	  
 	    
-	    public T retrieve()  
-	    {  
+	    
+	    
+	    public T retrieve()  {  
 	        return current.data;  
 	    }  
 	  
