@@ -193,7 +193,7 @@ public class DLLCompImp <T extends Comparable<T>>   implements DLLComp <T>  {
                 B [ k ++] = A[ j ++];  
         else  
             while ( i <= m )  
-                B [ k ++] = A[ i ++];  
+                B [ k ++] = A[ i ++];  //test
           
         for ( k = 0; k < B . length ; k ++)  
             A[ k + l ] = B [ k ];  
