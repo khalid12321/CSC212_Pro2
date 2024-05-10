@@ -32,22 +32,22 @@ public class DLLCompImp <T extends Comparable<T>>   implements DLLComp <T>  {
             return;  
           
         T[] a;  
-        a = (T[] )new Comparable [Doublelist.size()];  
+        a = (T[] )new Comparable [Doublelist.size()];  // make array with same size of DDL 
         this.findFirst();  
         int i = 0;  
         while (! Doublelist.empty())  
         {  
-            a[i++]  = this.retrieve();  
+            a[i++]  = this.retrieve();  // make dll empty and add its contenet to the array 
             this.remove();  
         }  
           
         mergesort (a, 0, a.length-1);  
   
         if (increasing )  
-            for (int index = 0 ; index < a.length ; index ++ )  
+            for (int index = 0 ; index < a.length ; index ++ )  // if incrasing add from array to dll from index zero th end 
                 this.insert(a[index]);  
         else  
-            for (int index = a.length-1 ; index >= 0 ; index -- )  
+            for (int index = a.length-1 ; index >= 0 ; index -- )  //else add from the end to the beganing 
                 this.insert(a[index]);  
           
           //
