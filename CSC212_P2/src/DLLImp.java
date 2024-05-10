@@ -54,13 +54,13 @@ public class DLLImp<T> implements DLL<T>{
 	}
 	
 	
-	//========================================================
+	
 	
 	
 	
 	 public Node<T> head;  
 	    public Node<T> current;  
-	    private int count;  
+	    private int counter;  
 	      
 	    public DLLImp() {  
 	            head = current = null;  
@@ -149,7 +149,7 @@ public class DLLImp<T> implements DLL<T>{
 	                        head = current = tmp;  
 	                    }  
 	            }  
-	            count++;  
+	            counter++;  
 	    }  
 	  
 	     
@@ -157,21 +157,24 @@ public class DLLImp<T> implements DLL<T>{
 	    public void remove()  
 	    {  
 	        if(current == head) {  
-	                    head = head.next;  
-	                    if(head != null)  
-	                       head.previous = null;  
+	                  head = head.next;  
+	                  if(head != null)  
+	                   head.previous = null;  
 	            }  
 	            else {  
-	                    current.previous.next = current.next;  
-	                    if(current.next != null)  
-	                       current.next.previous = current.previous;  
+	            current.previous.next = current.next;  
+	            if(current.next != null)  
+	               current.next.previous = current.previous;  
 	            }  
 	  
 	            if(current.next == null)  
 	                    current = head;  
 	            else  
-	                    current = current.next;  
-	            count --;  
+	          current = current.next;  
+	           
+		    
+		    
+		    counter --;  
 	    } 
 		
 		
