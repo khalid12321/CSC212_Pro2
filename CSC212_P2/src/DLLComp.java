@@ -7,6 +7,6 @@ public interface DLLComp<T extends Comparable<T>> extends DLL<T> {
 	// Returns the maximum element. The list must not be empty.
 	T getMax();
 
-	// Returns the maximum element. The list must not be empty.
+	// Returns the minumum element. The list must not be empty.
 	T getMin();
 }
