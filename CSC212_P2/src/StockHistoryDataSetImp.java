@@ -56,7 +56,7 @@ public class StockHistoryDataSetImp  implements StockHistoryDataSet {
                                                                        // operation is successful, false otherwise (company code already exists). 
             if ( ! Comp.find(stockHistory.getCompanyCode())) { //check if the company already exist 
               
-            	Comp.insert(stockHistory.getCompanyCode(), stockHistory); // if not add stock history and its code 
+            	Comp.insert(stockHistory.getCompanyCode(), stockHistory); // if not, add stock history and its code 
                
             	
             
