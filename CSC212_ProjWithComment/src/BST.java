@@ -165,7 +165,7 @@ public class BST<K extends Comparable<K>, T> implements Map<K, T> {
 		if (p == null)
 			return null;
 		if (key.compareTo(p.key) < 0)
-			p.left = remove_aux(key, p.left, flag);
+			p.left = remove_aux(key, p.left, flag);// to point "p" at the node we want to delete
 		else if (key.compareTo(p.key) > 0)
 			p.right = remove_aux(key, p.right, flag);
 		else {
@@ -206,7 +206,7 @@ public class BST<K extends Comparable<K>, T> implements Map<K, T> {
 	private void inOrderTraversal(BSTNode<K, T> node, DLLComp<K> dllcomp) {//BigO(n)
 		if (node == null)
 			return;
-		inOrderTraversal(node.left, dllcomp);
+		inOrderTraversal(node.left, dllcomp);//go all left
 		dllcomp.insert(node.key);
 		inOrderTraversal(node.right, dllcomp);
 	}
